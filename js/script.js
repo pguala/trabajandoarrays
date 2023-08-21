@@ -45,5 +45,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
     }
   }
   const cadenafiltrada = strangeArray.filter((cadena) => validarcadena(cadena));
-  showList(cadenafiltrada);
+  showList(
+    cadenafiltrada.sort(function (a, b) {
+      return a.localeCompare(b);
+    })
+  );
 });
