@@ -39,5 +39,11 @@ function showList(array) {
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
-  showList(strangeArray)
+  function validarcadena(x) {
+    if (typeof x === "string") {
+      return x;
+    }
+  }
+  const cadenafiltrada = strangeArray.filter((cadena) => validarcadena(cadena));
+  showList(cadenafiltrada);
 });
